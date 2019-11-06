@@ -9,10 +9,17 @@
 
 		<script>
 			// read user's number (popup window)
-			
+			var enternum=parseInt(prompt('Podaj liczbę od 1 do 5: '))
 			// create a random number
-			
+			var num=Math.floor(Math.random(6-1)+1)
 			// compare the numbers
+			if(enternum==num){
+				alert('You guessed right!')
+			}
+			
+			else{
+				alert('You failed')
+			}
 			
 			// show results (popup window)
 			
