@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text translation</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h3 onmouseover="normaltxt(this)" 
+		onmouseout="angielski(this)">Sticks and stones may break my bones, but words will never harm me.</h3 >
+		
+		<script>
+			function normaltxt(x){
+				let eng = "Kije i kamienie kości mi połamią, ale twoje słowa nigdy mnie nie zranią";
+				x.innerHTML=eng;
+			}
+			function angielski(x) {
+  				let pl="Sticks and stones may break my bones, but words will never harm me.";
+				x.innerHTML=pl;
+			}
+		</script>	
+	</body>
+</html>
