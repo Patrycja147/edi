@@ -7,11 +7,24 @@
 	<body>
 		<h1>Student</h1>
 		<p>Open a console and then click the button</p>
-		<input type="button" value="Display student's data">
+		<input type="button" value="Display student's data" onclick="connect()">
 		<p id="personalData"></p>
 
 		<script>
-
+			function connect(){
+				var method = 'GET';
+				var file = 'NameSurname.json';
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function(){
+					if(this.readyState==4 && this.status==200){
+						let obj = this.responseText;
+						obj=JSON.parse(obj);
+						console.log(obj);
+						document.getElementById('personalData').innerHTML=`${obj.name} ${obj.surname}`
+						}}
+				xhr.open(method, file);
+				xhr.send();
+			}
 		</script>
 
 	</body>
